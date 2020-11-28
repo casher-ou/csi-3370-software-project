@@ -1,13 +1,27 @@
 package edu.oakland.production.database;
 
 import edu.oakland.helper.admin.LocationDataPoint;
+import edu.oakland.helper.admin.TrackData;
 
-public interface DatabaseGisManager {
+public class DatabaseCommManager {
+  
+  public int passGetRfidRequest() {
+    return 0;
+  }
 
-  public void passStoreRequest(LocationDataPoint locationDataPoint);
+  public LocationDataPoint passGetLocationDataPointRequest(int offset) {
+    return null;
+  }
   
-  public void passModeRequest(String mode);
-  
-  public String passNextSatRequest(String currentSat);
-  
+  public TrackData passGetTrackDataRequest(int offset) {
+    return null;
+  }
+
+  public void passStoreTrackDataRequest(TrackData trackData) {
+        
+  }
+
+  public String passGetModeRequest() {
+    return "";
+  }
 }
