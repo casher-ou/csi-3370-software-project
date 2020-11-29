@@ -6,6 +6,7 @@ import edu.oakland.helper.admin.LocationDataPoint;
 import edu.oakland.production.database.DatabaseGisInterfaceClass;
 import edu.oakland.production.database.DatabaseGisManagerClass;
 import edu.oakland.production.database.DatabasePersistentStorageClass;
+import java.time.LocalDateTime;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +18,14 @@ public class DatabaseGisInterfaceTest {
   void dataPointInIsDataPointOut() {
     DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass();
     DatabasePersistentStorageClass dps = new DatabasePersistentStorageClass();
-    LocationDataPoint ldp = new LocationDataPoint(0, 0, null);
+    
+    LocationDataPoint ldp = new LocationDataPoint(0, 0, LocalDateTime.of(
+    	      (int) (Math.random() * 50 + 1970),
+    	      (int) (Math.random() * 12 + 1),
+    	      (int) (Math.random() * 28 + 1),
+    	      (int) (Math.random() * 24),
+    	      (int) (Math.random() * 60)
+    	    ));
     int i = 0;
     dgi.receiveStoreRequest(ldp);
     assertEquals(ldp, dps.getLocationDataPoint(i)); //Using dps cuz dgm doesn't have getLDP method
