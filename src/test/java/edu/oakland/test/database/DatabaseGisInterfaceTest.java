@@ -16,7 +16,7 @@ public class DatabaseGisInterfaceTest {
   @Test
   @DisplayName("LDP going in the same LDP coming out")
   void dataPointInIsDataPointOut() {
-    DatabaseGisManager dgm = null;
+    DatabaseGisManager dgm;
     DatabaseGisManagerStub dgms = new DatabaseGisManagerStub();
     DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgm);
     LocationDataPoint ldp = new LocationDataPoint(0, 0, LocalDateTime.of(
@@ -34,7 +34,7 @@ public class DatabaseGisInterfaceTest {
   @Test
   @DisplayName("Putting in the current satellite returns the new satellite")
   void currentSatGetsNextSat() {
-    DatabaseGisManager dgm = null;
+    DatabaseGisManager dgm;
     DatabaseGisManagerStub dgms = new DatabaseGisManagerStub();
     DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgm);
     String currentSat = "";
@@ -44,7 +44,7 @@ public class DatabaseGisInterfaceTest {
   @Test
   @DisplayName("The Mode Requested is the Actual Mode")
   void modeInIsModeOut() {
-    DatabaseGisManager dgm = null;
+    DatabaseGisManager dgm;
     DatabaseGisManagerStub dgms = new DatabaseGisManagerStub();
     DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgm);
     String n = "";
