@@ -4,7 +4,7 @@ import edu.oakland.helper.admin.LocationDataPoint;
 import edu.oakland.helper.admin.TrackData;
 
 
-public interface DatabasePersistentStorage {
+public interface DatabasePersistentStorageClass {
 
   public int locateRfidData(){
   	return 0;
