@@ -6,7 +6,7 @@ import edu.oakland.helper.admin.TrackData;
 public class DatabasePersistentStorageClass {
 
   public int locateRfidData() {
-	  return 0;
+    return 0;
   }
 
   public LocationDataPoint getLocationDataPoint(int offset) {
@@ -14,7 +14,7 @@ public class DatabasePersistentStorageClass {
   }
 
   public void storeLocationDataPoint(LocationDataPoint locationDataPoint) {
-	  
+
   }
 
   public TrackData getTrackData(int offset) {
@@ -22,7 +22,7 @@ public class DatabasePersistentStorageClass {
   }
 
   public void storeTrackData(TrackData trackData) {
-	  
+
   }
 
   public String getMode() {
@@ -30,7 +30,7 @@ public class DatabasePersistentStorageClass {
   }
 
   public void storeMode(String mode) {
-	  
+
   }
 
   public String getNextSat(String currentSat) {

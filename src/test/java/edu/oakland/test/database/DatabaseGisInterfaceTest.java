@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 @DisplayName("Database GisInterface Test")
 public class DatabaseGisInterfaceTest {
-  
+
   @Test
   @DisplayName("LDP going in the same LDP coming out")
   void dataPointInIsDataPointOut() {
@@ -20,12 +20,12 @@ public class DatabaseGisInterfaceTest {
     DatabasePersistentStorageClass dps = new DatabasePersistentStorageClass();
     
     LocationDataPoint ldp = new LocationDataPoint(0, 0, LocalDateTime.of(
-    	      (int) (Math.random() * 50 + 1970),
-    	      (int) (Math.random() * 12 + 1),
-    	      (int) (Math.random() * 28 + 1),
-    	      (int) (Math.random() * 24),
-    	      (int) (Math.random() * 60)
-    	    ));
+      (int) (Math.random() * 50 + 1970),
+      (int) (Math.random() * 12 + 1),
+      (int) (Math.random() * 28 + 1),
+      (int) (Math.random() * 24),
+      (int) (Math.random() * 60)
+    ));
     int i = 0;
     dgi.receiveStoreRequest(ldp);
     assertEquals(null, dps.getLocationDataPoint(i)); //Using dps cuz dgm doesn't have getLDP method
