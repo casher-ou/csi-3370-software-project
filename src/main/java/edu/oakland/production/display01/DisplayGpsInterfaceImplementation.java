@@ -5,7 +5,7 @@ import edu.oakland.helper.admin.Satellite;
 public class DisplayGpsInterfaceImplementation implements DisplayGpsInterface {
 
   public boolean receiveGpsSignal(Satellite satelliteSignal) {
-    if(satelliteSignal.getStrength() > 4) {
+    if (satelliteSignal.getStrength() > 4) {
       return true;
     } else {
       return false;
@@ -13,7 +13,7 @@ public class DisplayGpsInterfaceImplementation implements DisplayGpsInterface {
   }
 
   public String reportGpsSignalLoss(Satellite satelliteSignal) {
-    if(satelliteSignal.getStrength() > 4) {
+    if (satelliteSignal.getStrength() > 4) {
       return "";
     } else {
       return "No Signal";
