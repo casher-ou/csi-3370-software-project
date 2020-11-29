@@ -5,15 +5,15 @@ import edu.oakland.helper.admin.LocationDataPoint;
 public class DatabaseGisInterfaceClass {
 
   public void receiveStoreRequest(LocationDataPoint locationDataPoint) {
-	  
+
   }
 
   public String receiveModeRequest(String mode) {
-	  return "";
+    return "";
   } 
 
   public String receiveNextSatRequest(String currentSat) {
-	  return "";
+    return "";
   }
 
 }
