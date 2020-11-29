@@ -1,10 +1,7 @@
 package edu.oakland.production.database;
 
-import java.time.LocalDateTime;
-
 import edu.oakland.helper.admin.LocationDataPoint;
 import edu.oakland.helper.admin.TrackData;
-
 
 public class DatabasePersistentStorageClass {
 
@@ -13,15 +10,7 @@ public class DatabasePersistentStorageClass {
   }
 
   public LocationDataPoint getLocationDataPoint(int offset) {
-	  LocationDataPoint ldp = new LocationDataPoint(0, 0, LocalDateTime.of(
-    	      (int) (Math.random() * 50 + 1970),
-    	      (int) (Math.random() * 12 + 1),
-    	      (int) (Math.random() * 28 + 1),
-    	      (int) (Math.random() * 24),
-    	      (int) (Math.random() * 60)
-    	    ));
-
-	  return null;
+    return null;
   }
 
   public void storeLocationDataPoint(LocationDataPoint locationDataPoint) {
@@ -29,7 +18,7 @@ public class DatabasePersistentStorageClass {
   }
 
   public TrackData getTrackData(int offset) {
-	  return null;
+    return null;
   }
 
   public void storeTrackData(TrackData trackData) {
@@ -37,7 +26,7 @@ public class DatabasePersistentStorageClass {
   }
 
   public String getMode() {
-	  return "";
+    return "";
   }
 
   public void storeMode(String mode) {
@@ -45,7 +34,7 @@ public class DatabasePersistentStorageClass {
   }
 
   public String getNextSat(String currentSat) {
-	  return "";
+    return "";
   }
 
 
