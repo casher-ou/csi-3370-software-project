@@ -13,10 +13,5 @@ public class MiddlewareCommLinkManagerStub implements MiddlewareCommLinkManager{
       return tD;
 
   }
-    /*
-    stubMethod(rfid) {
-  new TrackData()
-  trackData.setMessage(rfid)
-  return trackData;
-}*/
+    
 }
