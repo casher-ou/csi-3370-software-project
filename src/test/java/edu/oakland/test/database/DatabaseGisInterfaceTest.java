@@ -18,7 +18,7 @@ public class DatabaseGisInterfaceTest {
   void dataPointInIsDataPointOut() {
     DatabaseGisManager dgm;
     DatabaseGisManagerStub dgms = new DatabaseGisManagerStub();
-    DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgm);
+    DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgms);
     LocationDataPoint ldp = new LocationDataPoint(0, 0, LocalDateTime.of(
         (int) (Math.random() * 50 + 1970),
         (int) (Math.random() * 12 + 1),
@@ -36,7 +36,7 @@ public class DatabaseGisInterfaceTest {
   void currentSatGetsNextSat() {
     DatabaseGisManager dgm;
     DatabaseGisManagerStub dgms = new DatabaseGisManagerStub();
-    DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgm);
+    DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgms);
     String currentSat = "";
     assertEquals("", dgi.receiveNextSatRequest(currentSat));
   }
@@ -46,7 +46,7 @@ public class DatabaseGisInterfaceTest {
   void modeInIsModeOut() {
     DatabaseGisManager dgm;
     DatabaseGisManagerStub dgms = new DatabaseGisManagerStub();
-    DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgm);
+    DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass(dgms);
     String n = "";
     assertEquals(n, dgi.receiveModeRequest(n)); //supposed to return a String with the mode
   }
