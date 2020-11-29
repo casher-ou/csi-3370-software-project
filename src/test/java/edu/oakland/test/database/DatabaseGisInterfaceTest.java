@@ -22,7 +22,7 @@ public class DatabaseGisInterfaceTest {
     ldp = null;
     int i = 0;
     dgi.recieveStoreRequest(ldp);
-    assertEquals(ldp, dps.getLocationDataPoint(i));//Using dps because dgm doesn't have a getLDP method
+    assertEquals(ldp, dps.getLocationDataPoint(i)); //Using dps cuz dgm doesn't have getLDP method
   }
 
   @Test
@@ -38,12 +38,12 @@ public class DatabaseGisInterfaceTest {
   void modeInIsModeOut() {
     DatabaseGisInterface dgi = new DatabaseGisInterface();
     String n = "normal";
-    assertEquals(n, dgi.receiveModeRequest(n));//supposed to return a String with the mode
+    assertEquals(n, dgi.receiveModeRequest(n)); //supposed to return a String with the mode
   }
    
   @Test
-  @DisplayName("Putting in the current satellite returns the new satellite")
-  void currentSatGetsNextSat() {
+  @DisplayName("Checks that manager isn't null")
+  void databaseGisManagerNotNull() {
     DatabaseGisManagerClass dgm = new DatabaseGisManagerClass();
     String currentSat = "GPS01";
     assertEquals("GPS02", dgm.passNextSatRequest(currentSat));
