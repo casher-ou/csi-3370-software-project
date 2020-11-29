@@ -5,22 +5,22 @@ import edu.oakland.production.database.DatabaseGisManagerStub;
 
 public class DatabaseGisInterfaceClass {
 
-  DatabaseGisManagerStub manager;
+  DatabaseGisManager manager;
 
-  public DatabaseGisInterfaceClass(DatabaseGisManagerStub m) {
+  public DatabaseGisInterfaceClass(DatabaseGisManager m) {
     manager = m;
   }
 
   public void receiveStoreRequest(LocationDataPoint locationDataPoint) {
-
+    manager.passStoreRequest(locationDataPoint);
   }
 
   public String receiveModeRequest(String mode) {
-    return "";
+    return manager.passModeRequest(mode);
   } 
 
   public String receiveNextSatRequest(String currentSat) {
-    return "";
+    return manager.passNextSatRequest(currentSat);
   }
 
 }
