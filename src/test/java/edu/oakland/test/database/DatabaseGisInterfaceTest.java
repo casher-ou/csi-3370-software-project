@@ -36,7 +36,7 @@ public class DatabaseGisInterfaceTest {
   @DisplayName("The Mode Requested is the Actual Mode")
   void modeInIsModeOut() {
     DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass();
-    String n = "normal";
+    String n = "";
     assertEquals(n, dgi.receiveModeRequest(n)); //supposed to return a String with the mode
   }
    
