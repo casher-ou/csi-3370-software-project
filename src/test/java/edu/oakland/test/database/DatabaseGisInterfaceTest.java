@@ -28,7 +28,7 @@ public class DatabaseGisInterfaceTest {
     	    ));
     int i = 0;
     dgi.receiveStoreRequest(ldp);
-    assertEquals(ldp, dps.getLocationDataPoint(i)); //Using dps cuz dgm doesn't have getLDP method
+    assertEquals(null, dps.getLocationDataPoint(i)); //Using dps cuz dgm doesn't have getLDP method
   }
 
   @Test

@@ -21,7 +21,7 @@ public class DatabasePersistentStorageClass {
     	      (int) (Math.random() * 60)
     	    ));
 
-	  return ldp;
+	  return null;
   }
 
   public void storeLocationDataPoint(LocationDataPoint locationDataPoint) {
