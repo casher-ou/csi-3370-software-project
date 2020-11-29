@@ -2,7 +2,7 @@ package edu.oakland.production.database;
 
 import edu.oakland.helper.admin.LocationDataPoint;
 
-public class DatabaseGisManager {
+public class DatabaseGisManagerClass {
 
   public void passStoreRequest(LocationDataPoint locationDataPoint) {
     
