@@ -6,8 +6,8 @@ import edu.oakland.helper.admin.TrackData;
 
 public class DatabasePersistentStorageClass {
 
-  LocationDataPoint ldp;
-  TrackData td; 
+  LocationDataPoint[] ldp;
+  TrackData[] td; 
   String storedMode;
 
   public int locateRfidData(){
