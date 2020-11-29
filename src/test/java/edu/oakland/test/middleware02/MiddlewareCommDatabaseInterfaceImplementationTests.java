@@ -8,35 +8,25 @@ import org.junit.jupiter.api.Test;
 
 import edu.oakland.production.database.DatabaseCommInterface;
 import edu.oakland.production.middleware02.MiddlewareCommDatabaseInterface;
+import edu.oakland.test.middleware02.DatabaseCommInterfaceStub;
+import edu.oakland.production.middleware02.MiddlewareCommDatabaseInterfaceImplementation;
 
-@DisplayName("MiddlewareCommDatabaseInterfaceImplementation Unit Tests")
+@DisplayName("MiddlewareCommDatabaseInterfaceImplementationTests Unit Tests")
 public class MiddlewareCommDatabaseInterfaceImplementationTests {
-    
-    @Test
-    @DisplayName("rfid In Is rfid Out")
-    void rfidInIsRfidOut(){
-        System.out.println("This is first test case");
-        int ranRfid = (int)(Math.floor(100000 + Math.random() * 900000));
-        MiddlewareCommDatabaseInterface Rfid = new MiddlewareCommDatabaseInterfaceImplementation(){
-			@Override
-			public int checkCurrentRfid() {
-				// TODO Auto-generated method stub
-				return 0;
-			}
-        };
-    }
+  int rfid;
+  @Test
+  @DisplayName("Rfid In Is the same Rfid Out")
+    void rfidInIsRfIdOut() {
+    int ranRfid = (int)(Math.floor(100000 + Math.random() * 900000));
+    MiddlewareCommDatabaseInterface mid02DatabaseInterface = new MiddlewareCommDatabaseInterfaceImplementation(new DatabaseCommInterfaceStub(ranRfid));
+    assertEquals(ranRfid, mid02DatabaseInterface.checkCurrentRfid());
+  }
 
-    @Test
-    @DisplayName("MiddleWareCommDatabaseInterface is not null")
-    void interfaceIsNotNull(){
-        assertThrows(IllegalArgumentException.class, ()->{new MiddlewareCommDatabaseInterfaceImplementation(null);
-        });
-    }
-
-    @Test
-    @DisplayName("dataBaseCommInterface is not null")
-    void databaseCommInterfaceIsNotNull() {
-        assertThrows(IllegalArgumentException.class, () -> {new MiddlewareCommDatabaseInterfaceImplementation(null);
+  @Test 
+  @DisplayName("Verifies if middlewareManager is set to Null")
+  void nullCheck(){
+    assertThrows(IllegalArgumentException.class, () -> {
+      new MiddlewareCommDatabaseInterfaceImplementation(null);
     });
-    }
+}
 }
