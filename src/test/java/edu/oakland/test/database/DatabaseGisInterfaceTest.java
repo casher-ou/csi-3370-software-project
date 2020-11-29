@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import edu.oakland.helper.admin.LocationDataPoint;
 import edu.oakland.production.database.DatabaseGisInterface;
-import edu.oakland.production.database.DatabaseGisManager;
+import edu.oakland.production.database.DatabaseGisManagerClass;
 import edu.oakland.production.database.DatabasePersistentStorage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -44,7 +44,7 @@ public class DatabaseGisInterfaceTest {
   @Test
   @DisplayName("Putting in the current satellite returns the new satellite")
   void currentSatGetsNextSat() {
-    DatabaseGisManager dgm = new DatabaseGisManager();
+    DatabaseGisManagerClass dgm = new DatabaseGisManagerClass();
     String currentSat = "GPS01";
     assertEquals("GPS02", dgm.passNextSatRequest(currentSat));
   }
