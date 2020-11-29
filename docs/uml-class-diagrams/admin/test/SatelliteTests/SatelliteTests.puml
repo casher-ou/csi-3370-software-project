@@ -8,12 +8,18 @@ package edu.oakland.test.admin {
        + void getLocation0IsCorrect()
        + void getLocation1IsCorrect()
        + void getLocationNIsCorrect()
-       + void initLocationIsNotNull()
-       + void satNameIsNotNull() 
+       + void getLocationAcrossMultipleObjectsInSync()
        + void strengthNotLessThanOneConstructor()
        + void strengthNotMoreThanTenConstructor()
        + void strengthNotLessThanOneSetter()
        + void strengthNotMoreThanTenSetter()
+       - int generateRandomStrength()
+       - float generateRandomIncrements()
+       - int generateRandomStringLength()
+       - int generateLessThanOne()
+       - int generateMoreThanTen()
+       - String generateRandomString(int length)
+       - LocationDataPoint generateRandomLocationDataPoint()
     }
 }
 
