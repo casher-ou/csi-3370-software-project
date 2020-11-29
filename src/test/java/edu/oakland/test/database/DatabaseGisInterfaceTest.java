@@ -18,7 +18,6 @@ public class DatabaseGisInterfaceTest {
     DatabaseGisInterfaceClass dgi = new DatabaseGisInterfaceClass();
     DatabasePersistentStorageClass dps = new DatabasePersistentStorageClass();
     LocationDataPoint ldp = new LocationDataPoint(0, 0, null);
-    ldp = null;
     int i = 0;
     dgi.receiveStoreRequest(ldp);
     assertEquals(ldp, dps.getLocationDataPoint(i)); //Using dps cuz dgm doesn't have getLDP method
