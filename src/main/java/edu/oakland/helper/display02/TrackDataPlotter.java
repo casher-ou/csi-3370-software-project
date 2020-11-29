@@ -6,7 +6,7 @@ public class TrackDataPlotter(){
 
   }
   public void displayPlotter(){
-    
+
   }
   private XYSeries getTrackData(){
 
