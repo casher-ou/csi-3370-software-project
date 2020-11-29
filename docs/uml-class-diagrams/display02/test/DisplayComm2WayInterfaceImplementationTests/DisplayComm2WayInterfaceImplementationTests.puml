@@ -2,7 +2,9 @@
 
 package edu.oakland.test.display02 {
     class DisplayComm2WayInterfaceImplementationTests {
-
+        + void rfidInIsInt()
+        + void rfidInIsRfidOut()
+        + void returnIsOfTypeTrackData()
     }
 }
 
