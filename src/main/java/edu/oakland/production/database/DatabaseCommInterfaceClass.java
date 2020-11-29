@@ -1,5 +1,7 @@
 package edu.oakland.production.database;
 
+import edu.oakland.production.database.DatabaseCommManager;
+
 public class DatabaseCommInterfaceClass {
   
   public DatabaseCommInterfaceClass(DatabaseCommManager databaseCommManager) {
@@ -23,7 +25,7 @@ public class DatabaseCommInterfaceClass {
   }
   
   public String receiveGetModeRequest() {
-    return null; 
+    return ""; 
   }
   
 }
